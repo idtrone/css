@@ -1,5 +1,18 @@
 body{
     background: black;
+    font-family: helvetica;
+}
+
+#wrapper
+{
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 960px;
 }
 
 header {
@@ -12,7 +25,7 @@ header {
 
 .titulo {
     float: left;
-    padding: 15px 0;
+    padding: 15px 10px;
     height: 100%;
 }
 
@@ -25,7 +38,7 @@ ul{
 li{
     float: right;
     display: block;
-    margin: 0 5px;
+    margin: 0 10px;
     padding: 15px 0;
     height: 100%;
 }
@@ -33,7 +46,33 @@ li{
 li a{
     color: white;
     font-style: normal;
+    text-decoration: none;
 }
+
+figure{
+    margin: 0;
+}
+
+.column1{
+    width: 100%;
+    background: #82c3a6;
+}
+.column1 img{
+    width: 40%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.container2{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    background: #d5c75f;
+}
+
 
 
 footer{
