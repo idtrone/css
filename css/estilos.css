@@ -1,6 +1,7 @@
 body{
     background: black;
-    font-family: helvetica;
+    font-family: "Dancing Script";
+    font-size: 20px;
 }
 
 #wrapper
@@ -24,28 +25,29 @@ header {
 }
 
 .titulo {
-    float: left;
-    padding: 15px 10px;
-    height: 100%;
-}
-
-ul{
-    float: right;
-    list-style-type: none;
-    margin: 0;
-}
-
-li{
-    float: right;
+    /*float: left;*/
     display: block;
-    margin: 0 10px;
-    padding: 15px 0;
+    padding: 10px 10px;
     height: 100%;
+    text-align: center;
 }
 
-li a{
+nav{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+
+nav a{
     color: white;
     font-style: normal;
+    text-shadow: 0 0;
+    padding: 0 5px;
+}
+
+nav a.active{
     text-decoration: none;
 }
 
@@ -125,5 +127,7 @@ column3{
 footer{
     clear: both;
     width: 100%;
-    height: 70px;
+    border-radius: 0 0 5px 5px;
+    background: #C6d5c5;
+    padding: 20px 10px;
 }
