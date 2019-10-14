@@ -1,6 +1,6 @@
 body{
     background: black;
-    font-family: "Dancing Script";
+    font-family: 'Dancing Script', cursive;
     font-size: 20px;
 }
 
@@ -59,10 +59,14 @@ figure{
     width: 100%;
     background: #82c3a6;
 }
-.column1 img{
-    width: 90%;
+
+img{
     display: block;
     margin: 0 auto;
+
+}
+.column1 img{
+    width: 90%;
     padding: 20px 0;
 }
 
@@ -76,24 +80,74 @@ figure{
 
 .column2{
     width: 100%;
+    padding: 20px 0;
 }
 
 column3{
     width: 100%;
+    padding: 20px 0;
 }
 
 .column2 img{
     width: 80%;
-    padding: 10px 15px;
-    display: block;
-    margin: auto auto;
 }
 
-.column3 img{
+@-webkit-keyframes imagen2-rotation {
+    0%{
+        transform: rotate(0deg);
+        transition: rotate;
+        -webkit-transition: rotate; /*Chrome - Safari*/
+        -moz-transition: rotate; /*Mozilla*/;
+        box-shadow: 2px 2px 10px #82c3a6;
+    }
+
+    50%{
+    transform: rotate(10deg);
+        transition: rotate;
+        -webkit-transition: rotate; /*Chrome - Safari*/
+        -moz-transition: rotate; /*Mozilla*/
+        box-shadow: 2px 2px 10px #82c3a6;
+    }
+}
+
+.column2 img:hover{
+    animation-name: imagen2-rotation;
+    animation-duration: 600ms;
+    -webkit-animation-delay: 600ms;
+    -moz-animation-delay: 600ms;
+    -o-animation-delay: 600ms;
+    animation-delay: 600ms;
+}
+
+.column3 img {
     width: 80%;
-    padding: 10px 15px;
-    display: block;
-    margin: auto auto;
+}
+
+@-webkit-keyframes imagen3-traslation {
+    0%{
+        transform: translate(0, 0);
+        transition: translate;
+        -webkit-transition: translate; /*Chrome - Safari*/
+        -moz-transition: translate; /*Mozilla*/;
+        box-shadow: 2px 2px 10px #82c3a6;
+    }
+
+    50%{
+        transform: translate(20px, -5px);
+        transition: translate;
+        -webkit-transition: translate; /*Chrome - Safari*/
+        -moz-transition: translate; /*Mozilla*/;
+        box-shadow: 2px 2px 10px #82c3a6;
+    }
+}
+
+.column3 img:hover{
+    animation-name: imagen3-traslation;
+    animation-duration: 700ms;
+    -webkit-animation-delay: 700ms;
+    -moz-animation-delay: 700ms;
+    -o-animation-delay: 700ms;
+    animation-delay: 700ms;
 }
 
 @media all and (max-width: 900px) and (min-width: 700px) {
