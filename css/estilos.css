@@ -55,12 +55,12 @@ nav a.active{
 /*estilos generales de la imagen*/
 img{
     width: 100%;
-    max-width: 380px;
+    max-width: 400px;
     box-shadow: 2px 2px #02010a;
 }
 
 figure{
-    margin: 0;
+    margin: 7px 0;
     text-align: center;
 }
 
@@ -96,11 +96,11 @@ figure figcaption a{
 */
 .section2 figure{
     width: 50%;
-    margin: 0 auto;
+    margin: 7px auto;
 }
 
 /*animacion de la imagen de la derecha*/
-.section2 figure img[alt="landscape"]:hover{
+img.rotate:hover{
     animation-name: imagen2-rotation;
     animation-duration: 600ms;
     -webkit-animation-delay: 600ms;
@@ -128,7 +128,7 @@ figure figcaption a{
 }
 
 /*animacion de la imagen de la izquierda*/
-.section2 figure img[alt="portrait"]:hover{
+img.translate:hover{
     animation-name: imagen3-traslation;
     animation-duration: 700ms;
     -webkit-animation-delay: 700ms;
@@ -155,6 +155,21 @@ figure figcaption a{
     }
 }
 
+img.blur10{
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    -ms-filter: blur(10px);
+}
+
+img.gray100{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+img.sepia90{
+    filter: sepia(90%);
+    -webkit-filter: sepia(90%);
+}
 
 /*estilos de footer*/
 footer{
@@ -204,18 +219,16 @@ footer div a{
         float: right;
     }
 
-    .column1 img{
-        width: 43%;
+    .section1 figure{
+        width: 50%;
     }
 
-    .column2{
+    .section2 figure{
         width: 50%;
-        padding: 20px 0;
     }
 
-    .column3{
-        width: 50%;
-        padding: 20px 0;
+    .section2.col3 figure{
+        width: 30%;
     }
 
     footer div{
