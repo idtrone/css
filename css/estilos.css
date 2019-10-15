@@ -4,45 +4,43 @@ body{
     font-size: 20px;
 }
 
-h3{
+h1, h3{
     margin: 5px 0;
 }
 
-#wrapper
-{
-    margin: 0 auto;
-}
-
-.container {
+/* Estilos del contenedor de la pagina principal */
+.contenido {
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    max-width: 960px;
+    max-width: 900px;
 }
 
 header {
     background: #5b7989;
     color: white;
-    text-shadow: 2px 2px 2px #02010a;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
 }
 
 .titulo {
-    /*float: left;*/
+    text-shadow: 2px 2px 2px #02010a;
     display: block;
     padding: 10px 10px;
-    height: 100%;
     text-align: center;
+}
+
+/* estilos de la navegacion */
+.navigator{
+    text-align: center;
+    display: block;
+    padding: 10px;
 }
 
 nav{
-    display: block;
     text-align: center;
     width: 100%;
-    padding: 10px 0;
 }
-
 
 nav a{
     color: white;
@@ -54,42 +52,61 @@ nav a{
 nav a.active{
     text-decoration: none;
 }
+/*estilos generales de la imagen*/
+img{
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 2px 2px #02010a;
+}
 
 figure{
     margin: 0;
+    text-align: center;
 }
 
-.column1{
+figure figcaption{
+    display: block;
+    padding: 5px 0;
+}
+figure figcaption a{
+    color: black;
+    text-decoration: none;
+}
+/*seccion 1 que contiene la imagen central*/
+.section1{
     width: 100%;
     background: #82c3a6;
-}
-
-img{
-    display: block;
-    margin: 0 auto;
-
-}
-.column1 img{
-    width: 90%;
     padding: 20px 0;
 }
+/* figure que contiene la imagen central*/
+.section1 figure{
+    width: 80%;
+    margin: 0 auto;
+}
 
-.container2{
-    margin: 0;
+/*seccion 2 que contiene las imagenes secundarias*/
+.section2{
     width: 100%;
+    background: #d5c75f;
+    padding: 20px 0;
     display: flex;
     flex-flow: row wrap;
-    background: #d5c75f;
+}
+/* estableciendo valor preterminado del figure
+*/
+.section2 figure{
+    width: 50%;
+    margin: 0 auto;
 }
 
-.column2{
-    width: 100%;
-    padding: 20px 0;
-}
-
-
-.column2 img{
-    width: 80%;
+/*animacion de la imagen de la derecha*/
+.section2 figure img[alt="landscape"]:hover{
+    animation-name: imagen2-rotation;
+    animation-duration: 600ms;
+    -webkit-animation-delay: 600ms;
+    -moz-animation-delay: 600ms;
+    -o-animation-delay: 600ms;
+    animation-delay: 600ms;
 }
 
 @-webkit-keyframes imagen2-rotation {
@@ -110,22 +127,14 @@ img{
     }
 }
 
-.column2 img:hover{
-    animation-name: imagen2-rotation;
-    animation-duration: 600ms;
-    -webkit-animation-delay: 600ms;
-    -moz-animation-delay: 600ms;
-    -o-animation-delay: 600ms;
-    animation-delay: 600ms;
-}
-
-.column3{
-    width: 100%;
-    padding: 20px 0;
-}
-
-.column3 img {
-    width: 80%;
+/*animacion de la imagen de la izquierda*/
+.section2 figure img[alt="portrait"]:hover{
+    animation-name: imagen3-traslation;
+    animation-duration: 700ms;
+    -webkit-animation-delay: 700ms;
+    -moz-animation-delay: 700ms;
+    -o-animation-delay: 700ms;
+    animation-delay: 700ms;
 }
 
 @-webkit-keyframes imagen3-traslation {
@@ -146,18 +155,10 @@ img{
     }
 }
 
-.column3 img:hover{
-    animation-name: imagen3-traslation;
-    animation-duration: 700ms;
-    -webkit-animation-delay: 700ms;
-    -moz-animation-delay: 700ms;
-    -o-animation-delay: 700ms;
-    animation-delay: 700ms;
-}
 
+/*estilos de footer*/
 footer{
     clear: both;
-    text-align: justify;
     width: 100%;
     border-radius: 0 0 5px 5px;
     background: #C6d5c5;
@@ -167,6 +168,7 @@ footer{
 }
 
 footer div{
+    text-align: justify;
     margin: 5px 15px;
     width: 100%;
 }
@@ -175,33 +177,33 @@ footer div a{
     text-decoration: none;
     padding: 0 0 5px 0;
     display: block;
+    color: black;
 }
 
-@media all and (max-width: 900px) and (min-width: 700px) {
-    .column1 img{
-        width: 50%;
+/* resoluciones responsivas segun la resolcion de la pantalla*/
+@media all and (max-width: 899px) {
+    .section1 figure{
+        width: 70%;
     }
 
-    .column2{
-        width: 50%;
-        padding: 20px 0;
-    }
-
-    .column3{
-        width: 50%;
-        padding: 20px 0;
+    .section2 figure{
+        width: 70%;
     }
 
     footer div{
-        width: 45%;
-    }
-
-    #social{
         width: 100%;
     }
 }
 
 @media all and (min-width: 900px) {
+    .titulo {
+        float: left;
+    }
+
+    .navigator{
+        float: right;
+    }
+
     .column1 img{
         width: 43%;
     }
@@ -217,7 +219,7 @@ footer div a{
     }
 
     footer div{
-        width: 30%;
+        width: 21%;
     }
 }
 
