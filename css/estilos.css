@@ -8,12 +8,36 @@ h1, h3{
     margin: 5px 0;
 }
 
+h3{
+    font-size: 22px;
+}
+
 /* Estilos del contenedor de la pagina principal */
 .contenido {
     margin: 0 auto;
     padding: 0;
     width: 100%;
     max-width: 900px;
+    animation-name: slidein;
+    animation-duration: 700ms;
+    -webkit-animation-delay: 700ms;
+    -moz-animation-delay: 700ms;
+    -o-animation-delay: 700ms;
+    animation-delay: 700ms;
+}
+
+@-webkit-keyframes slidein {
+    0%{
+        margin-top: 150%;
+    }
+
+    60%{
+        margin-top: -5%;
+    }
+
+    100%{
+        margin-top: 0%;
+    }
 }
 
 header {
@@ -28,6 +52,7 @@ header {
     display: block;
     padding: 10px 10px;
     text-align: center;
+    font-size: 25px;
 }
 
 /* estilos de la navegacion */
@@ -53,7 +78,7 @@ nav a.active{
     text-decoration: none;
 }
 /*estilos generales de la imagen*/
-img{
+section figure img{
     width: 100%;
     max-width: 400px;
     box-shadow: 2px 2px #02010a;
@@ -186,13 +211,19 @@ footer div{
     text-align: justify;
     margin: 5px 15px;
     width: 100%;
+    font-size: 17px;
 }
 
 footer div a{
-    text-decoration: none;
+    /*text-decoration: none;*/
     padding: 0 0 5px 0;
     display: block;
     color: black;
+}
+
+a img{
+    width: 16px;
+    padding: 0 5px 0 0;
 }
 
 /* resoluciones responsivas segun la resolcion de la pantalla*/
